@@ -8,7 +8,7 @@ const getByPositionController = async (req, res) => {
         let { position } = req.params;
         let q = req.query;
         let obj = JSON.stringify(q); 
-        console.log(q, position)
+        // console.log(q, position)
         if (obj != "{}") {
             if (q.createdAt) {
                 q.createdAt = JSON.parse(q.createdAt)

@@ -52,6 +52,9 @@ const dataSchema = new Schema({
     type: String,
     required: true
   }
+},
+{
+    timestamps: true
 });
 
 const Model = mongoose.model("Candidates", dataSchema);

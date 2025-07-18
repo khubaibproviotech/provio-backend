@@ -1,6 +1,8 @@
-import getData from "../services/get.js"
+import getData from "../services/get.js";
+import { getByField } from "../db/index.js";
+import { INTERNAL_SERVER_ERROR_MESSAGE } from "../../../constants/index.js";
 
-let getController = async (req, res) => {
+let getController = async (req, res, next) => {
     try {
         let q = req.query;
         let obj = JSON.stringify(q);

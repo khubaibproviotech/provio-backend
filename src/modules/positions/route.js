@@ -3,10 +3,11 @@ import getController from "./controllers/get.js";
 import postController from "./controllers/post.js";
 import deleteController from "./controllers/delete.js";
 import updateController from "./controllers/update.js";
-
+import SuperAdminAuth from "../../helper/index.js";
 
 let router = Router()
 
+router.use("/", SuperAdminAuth)
 router.get("/" ,  getController)
 router.post("/" ,  postController)
 router.delete("/:id" ,  deleteController)

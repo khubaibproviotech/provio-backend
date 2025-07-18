@@ -3,9 +3,12 @@ import routes from "./src/routes/index.js";
 import mongoose from "mongoose";
 import { ENV } from "./src/constants/index.js";
 import cors from "cors";
+import helmet from "helmet";
 const app = express();
 
 app.use(express.json());
+
+app.use(helmet());
 
 app.use(cors());
 
